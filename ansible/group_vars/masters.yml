@@ -1,6 +1,6 @@
 ---
 # Role: keepalived
-#keepalived_vip: ''
+keepalived_vip: '192.168.2.40'
 #keepalived_interface: "{{ ansible_default_ipv4['interface'] }}"
 
 # Role: cluster
@@ -26,3 +26,7 @@
 #cloudflared_enabled: false
 #cloudflared_kube_api_server_dns: ''
 #cloudflared_version: 2020.8.0
+cluster_extra_sans:
+  - "{{ keepalived_vip }}"
+  - api.kubernetes.lan
+cluster_control_plane_endpoint: "api.kubernetes.lan:8443"
