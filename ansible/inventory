@@ -5,3 +5,4 @@ k8s-master-03 hostname=k8s-master-03 ansible_host=192.168.2.52 ansible_user=pi
 
 [workers]
 k8s-worker-01 hostname=k8s-worker-01 ansible_host=192.168.2.53 ansible_user=pi
+k8s-worker-02 hostname=k8s-worker-02 ansible_host=192.168.2.54 ansible_user=pi

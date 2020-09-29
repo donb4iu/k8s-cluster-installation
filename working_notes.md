@@ -85,7 +85,10 @@ proc            /proc           proc    nodev,noexec,nosuid 0       0
 
 ## NETWORK ISSUES
 
-* sudo vim 99-kubernetes-cri.conf
+### Set /proc/sys/net/bridge/bridge-nf-call-iptables to 1 by running
+
+
+* sudo vim /etc/sysctl.d/99-kubernetes-cri.conf
 ```aidl
 net.bridge.bridge-nf-call-iptables=1
 net.bridge.bridge-nf-call-ip6tables=1
@@ -94,4 +97,6 @@ net.ipv4.ip_forward=1
 ```
 
 * sudo modprobe br_netfilter
+
+
 
